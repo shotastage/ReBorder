@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+##
+## Clean cache directory
+##
+if [ -e .cache ]; then
+  rm -rf .cache/
+fi
+##
+## Run Postgres SQL server
+##
+open /Applications/Postgres.app
+##
+## Run server
+##
+python3 ./manage.py runserver
