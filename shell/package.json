@@ -1,0 +1,14 @@
+{
+  "name": "shell",
+  "version": "0.0.1",
+  "description": "Web based view of SFCoin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shota Shimazu",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.2"
+  }
+}
