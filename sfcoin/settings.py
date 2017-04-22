@@ -75,9 +75,13 @@ WSGI_APPLICATION = 'sfcoin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'dfdsquac5o3lh7',
+         'USER': 'xaunnvfungumhs',
+         'PASSWORD' : '4abc81014346546b3cad72f508f65d1d9efc691b781075f10ab71547ca80ce9b',
+         'HOST' : 'ec2-54-225-127-147.compute-1.amazonaws.com',
+         'PORT' : 5432,
+     }
 }
 
 
