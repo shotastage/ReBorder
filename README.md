@@ -1,6 +1,6 @@
-# SFCOIN (Test project)
+# ReBorder (Test project)
 
-SFCOIN is virtual payment system for SFC (Keio univ Shonan Fujisawa Campus).
+ReBorder is virtual payment system for SFC (Keio univ Shonan Fujisawa Campus).
 
 # Contributors
 
