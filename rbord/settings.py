@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'auth.apps.AuthConfig',
+    'rbauth.apps.RbAuthConfig',
     'main.apps.MainConfig',
     'gunicorn',
 ]
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sfcoin.urls'
+ROOT_URLCONF = 'rbord.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sfcoin.wsgi.application'
+WSGI_APPLICATION = 'rbord.wsgi.application'
 
 
 # Database

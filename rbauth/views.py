@@ -3,7 +3,7 @@ from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
-from auth.validator import Validation
+from rbauth.validator import Validation
 
 # Create an instance of checking methods.
 VALID = Validation()

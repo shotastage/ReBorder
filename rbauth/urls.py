@@ -16,7 +16,7 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
-from auth.views import Signup
+from rbauth.views import Signup
 
 
 urlpatterns = [
