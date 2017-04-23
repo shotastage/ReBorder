@@ -23,4 +23,4 @@ Then, run the `bootstrap` and access `http://127.0.0:8000`.
 - 😀 **Shota Shimazu** ✉️ **t16440ss@sfc.keio.ac.jp**
 
 # License
-This software incliding original depended packages are licensed under the SFCOIN License, see [LICENSE](LICENSE) for detail.
+This software is incliding original depended packages are licensed under the SFCOIN License, see [LICENSE](LICENSE) for detail.
