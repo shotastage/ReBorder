@@ -20,7 +20,7 @@ from auth.views import Signup
 
 
 urlpatterns = [
-    url(r'^login/', auth_views.login, {'template_name': 'auth/login.html'}, name='login'),
+    url(r'^login/', auth_views.login, {'template_name': 'pages/login.html'}, name='login'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^signup/', Signup.as_view(), name='signup'),
 ]
