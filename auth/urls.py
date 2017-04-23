@@ -16,12 +16,11 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
-from auth.views import Signup, Account
+from auth.views import Signup
 
 
 urlpatterns = [
     url(r'^login/', auth_views.login, {'template_name': 'auth/login.html'}, name='login'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^signup/', Signup.as_view(), name='signup'),
-    url(r'^account/', Account.as_view()),
 ]
