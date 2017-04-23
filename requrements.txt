@@ -18,7 +18,6 @@ gunicorn==19.6.0
 isort==4.2.5
 lazy-object-proxy==1.2.2
 lxml==3.7.3
-matplotlib==2.0.0
 mccabe==0.5.2
 multidict==2.1.4
 netifaces==0.10.5
@@ -31,7 +30,6 @@ protobuf==3.2.0
 psycopg2==2.6.2
 pycurl==7.43.0
 PyJWT==1.4.2
-PyMySQL==0.7.9
 pyparsing==2.2.0
 pypugjs==4.0.0
 python-dateutil==2.6.0
