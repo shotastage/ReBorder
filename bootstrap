@@ -8,7 +8,7 @@ fi
 ##
 ## Run Postgres SQL server
 ##
-open /Applications/Postgres.app
+## open /Applications/Postgres.app
 ##
 ## Run server
 ##
