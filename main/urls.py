@@ -19,5 +19,5 @@ from main.views import MainView
 
 
 urlpatterns = [
-    url(r'^$', MainView.as_view(), name='index'),
+    url(r'^pay/$', MainView.as_view(), name='index'),
 ]

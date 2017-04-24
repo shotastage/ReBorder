@@ -1,19 +1,23 @@
 {% extends '../templates/base.html' %}
-{% block content %}
 
+{% block content %}
 <div class="covering-jubotoron" id="top_jumbotron">
   <div class="top-bar">
-    <h1><a class="add-link" href="/">SFCOIN</a></h1>
+    <h1><a class="add-link" href="/">ReBorder</a></h1>
   </div>
   <div class="covering-contents" id="login-screen">
+
     <div class="login-card login">
       <h1>LOGIN</h1>
+
+
       {% if form.errors %}
         <p class="msg-error">ユーザー名かパスワードが違います。</p>
       {% else %}
         <p>ユーザー名とパスワードを入力してください。</p>
       {% endif %}
-      <form action="{% url 'login' %}"　method="post" role="form">{% csrf_token %}
+
+      <form action="{% url 'login' %}" method="post" role="form">{% csrf_token %}
         <p class="user">
           <label for="id_username"></label><input id="id_username" class="form" type="text" placeholder="ユーザー名" name="username" autofocus required/>
         </p>
@@ -21,7 +25,7 @@
           <label for="id_password"></label><input id="id_password" class="form"  name="password" type="password" placeholder="パスワード" required/>
         </p>
         <p class="submit">
-          <button type="submit" value="login" class="button round">ログイン</button>
+          <button type="submit" class="button round">ログイン</button>
         </p>
         <input name="next" type="hidden" value="{{ next }}"/>
       </form>

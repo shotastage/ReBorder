@@ -25,7 +25,7 @@ SECRET_KEY = 'bt94j2j93atzn2t2r*k5*og@0-0muk0bgp$$yktzupqt$06y$^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rbauth.apps.RbAuthConfig',
-    'main.apps.MainConfig',
+    'rbauth',
+    'main',
     'gunicorn',
 ]
 
@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'rbord.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'dfdsquac5o3lh7',
-         'USER': 'xaunnvfungumhs',
-         'PASSWORD' : '4abc81014346546b3cad72f508f65d1d9efc691b781075f10ab71547ca80ce9b',
-         'HOST' : 'ec2-54-225-127-147.compute-1.amazonaws.com',
+         'NAME': 'rb_test',
+         'USER': 'shota',
+         'PASSWORD' : '',
+         'HOST' : 'localhost',
          'PORT' : 5432,
      }
 }
@@ -130,4 +130,4 @@ STATIC_URL = '/static/'
 
 # Login redirect URL
 # If the auth success, we'll redirect this url.
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/pay/'
