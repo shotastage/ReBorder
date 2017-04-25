@@ -5222,3 +5222,9 @@ button {
 
 .sc_unit {
   font-size: 2rem; }
+
+.visible {
+  display: none; }
+
+.invisible {
+  display: none; }

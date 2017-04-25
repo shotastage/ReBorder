@@ -8,6 +8,7 @@ class UserProfile(models.Model):
     user_student_id = models.CharField(max_length=8)
     user_ethereum_account = models.CharField(max_length=100)
     user_is_admin = models.BooleanField
+    user_is_completed_profile = models.BooleanField
 
 
 

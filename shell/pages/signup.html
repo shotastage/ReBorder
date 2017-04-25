@@ -29,25 +29,43 @@
         {% endif %}
       {% endif %}
       <form action="{% url 'signup' %}" method="post" role="form">{% csrf_token %}
-        <p class="mail">
-          <label for="id_email"><input class="form" type="email" name="email" placeholder="Eメール" autofocus required/>
-        </p>
-        <p class="user">
-          <label for="id_username"><input class="form" type="username" name="username" placeholder="ユーザー名" required/>
-        </p>
-        <p class="pass">
-          <label for="id_password"><input class="form" type="password" name="password" placeholder="パスワード" required/>
-        </p>
-        <p class="agree">
-          <label class="label-checkbox">
-            <input type="checkbox" name="checkbox"/>
-            <span class="lever"><a href="/provides/terms/">利用規約</a>に同意する</span>
-          </label>
-        </p>
-        <p class="submit">
-	        <button type="submit" class="button round">無料登録</button>
-        </p>
-        <input name="next" type="hidden" value="{{ next }}"/>
+        <div id="signup_step1">
+          <p class="mail">
+            <label for="id_email"><input class="form" type="email" name="email" placeholder="Eメール" autofocus required/>
+          </p>
+          <p class="user">
+            <label for="id_username"><input class="form" type="username" name="username" placeholder="ユーザー名" required/>
+          </p>
+          <p class="pass">
+            <label for="id_password"><input class="form" type="password" name="password" placeholder="パスワード" required/>
+          </p>
+          <p class="submit">
+	          <button class="button round" id="signup_next">NEXT</button>
+          </p>
+        </div>
+
+
+        <div id="signup_step2" class="invisible">
+          <p class="first_name">
+            <label for="id_first_name"><input class="form" type="name" name="first_name" placeholder="First Name" required/>
+          </p>
+          <p class="last_name">
+            <label for="id_last_name"><input class="form" type="name" name="last_name" placeholder="Last Name" required/>
+          </p>
+          <p class="student_id">
+            <label for="id_student_id"><input class="form" type="id" name="id" placeholder="Student ID" required/>
+          </p>
+          <p class="agree">
+            <label class="label-checkbox">
+              <input type="checkbox" name="checkbox"/>
+              <span class="lever"><a href="/provides/terms/">利用規約</a>に同意する</span>
+            </label>
+          </p>
+          <p class="submit">
+	          <button type="submit" class="button round">登録</button>
+          </p>
+          <input name="next" type="hidden" value="{{ next }}"/>
+        </div>
       </form>
     </div>
   </div>
