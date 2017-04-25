@@ -4651,7 +4651,8 @@ button {
     color: #45ddb7; }
 
 .round {
-  border-radius: 30px; }
+  border-radius: 30px;
+  text-align: center; }
 
 .outline {
   background: transparent;
@@ -4661,7 +4662,7 @@ button {
   border-color: #333;
   color: #333; }
 
-#signup, #login {
+#logout, #signup, #login {
   height: 40px;
   line-height: 38.1px;
   width: 140px;
@@ -5218,3 +5219,6 @@ button {
   color: #fff;
   left: 40px;
   top: 32px; }
+
+.sc_unit {
+  font-size: 2rem; }
