@@ -3,6 +3,7 @@ from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
+from main.models import UserProfile
 from rbauth.validator import Validation
 
 # Create an instance of checking methods.
@@ -22,9 +23,14 @@ class Signup(View):
         email = request.POST['email']
         username = request.POST['username']
         password = request.POST['password']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        student_id = request.POST['id']
         agree = request.POST.getlist('checkbox')
+
         # Error Status
         error = "None"
+
         # Registering Data Validation
         # Empty Check
         if VALID.empty([email, username, password]):
@@ -76,5 +82,12 @@ class Signup(View):
         else:
             # Create user and redirect to login screen.
             user = User.objects.create_user(username, email, password)
+            user.first_name = first_name
+            user.last_name = last_name
             user.save()
+
+            rb_user = UserProfile(
+                    user_student_id = student_id,
+            )
+            rb_user.save()
             return HttpResponseRedirect('/login/')

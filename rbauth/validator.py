@@ -18,6 +18,8 @@ class Validation():
 
     def email(self, value):
         """ Valid E-mail adress"""
+        if not "@sfc.keio.ac.jp" in value:
+            return True
         # Temporary avoid
         return False
 
@@ -27,3 +29,7 @@ class Validation():
             return True
         else:
             return False
+
+    def studentID(self, id):
+        if not len(id) == 8:
+            return True
