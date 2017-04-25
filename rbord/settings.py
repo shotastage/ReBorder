@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'rbord.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'rb_test',
-         'USER': 'shota',
-         'PASSWORD' : '',
-         'HOST' : 'localhost',
+         'NAME': 'dfdsquac5o3lh7',
+         'USER': 'xaunnvfungumhs',
+         'PASSWORD' : '4abc81014346546b3cad72f508f65d1d9efc691b781075f10ab71547ca80ce9b',
+         'HOST' : 'ec2-54-225-127-147.compute-1.amazonaws.com',
          'PORT' : 5432,
      }
 }
@@ -131,3 +131,8 @@ STATIC_URL = '/static/'
 # Login redirect URL
 # If the auth success, we'll redirect this url.
 LOGIN_REDIRECT_URL = '/pay/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'shell'),
+]
