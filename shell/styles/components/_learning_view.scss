@@ -1,0 +1,19 @@
+
+.learning-view {
+    display: inline-block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #19B5FE;
+    z-index: 3000;
+    top: 0;
+}
+
+.lv-main-title {
+    color: #fff;
+}
+
+.window {
+    position: relative;
+    left: 30px;
+}

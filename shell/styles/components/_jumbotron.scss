@@ -1,0 +1,61 @@
+/* 
+*  _jumbotron.scss
+*  Created by Shota Shimazu on 2016/12/03
+*  Copyright (c) HappinessLab, Inc 2016
+*/ 
+
+
+.covering-jumbotron {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  background-size: contain;
+}
+
+#top_jumbotron {
+  height: 100vh;
+  width: 100vw;
+  background: #fafbfc /* url("https://keio.box.com/shared/static/cekqr3hep3dxhdhtovtp8ts7bg8dxcaz.jpg") no-repeat */;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  /*
+  &::before {
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+  }
+  */
+}
+
+.covering-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  color: #333;
+  width: 800px;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+
+#login-screen {
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}

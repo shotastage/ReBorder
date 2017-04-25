@@ -1,0 +1,231 @@
+/*
+*
+*  Main styles of LG card
+*
+*/
+// Card main style
+.lg-card {
+  position: relative;
+  margin: 10px auto;
+  margin-top: -5px;
+  width: 100%;
+  height: 350px;
+  color: #fff;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 480px) {
+  .lg-card {
+    height: 490px;
+  }
+}
+
+.lg-card-large {
+  height: 420px;
+}
+
+
+.lg-card-heading {
+  height: 220px;
+}
+
+.lg-card-content {
+  padding: 20px;
+}
+
+.lg-card-title {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Asap', sans-serif;
+}
+
+.lg-card-title-md {
+  position: relative;
+  left: 80px;
+  text-align: left;
+}
+
+.lg-card-title-large {
+  position: relative;
+  left: 37px;
+  text-align: left;
+}
+
+
+
+.lg-card-title-heading {
+  position: relative;
+  left: 0;
+  text-align: left;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+
+
+.lg-card-text {
+  color: #fff;
+  font-size: 14px !important;
+  line-height: 1.5;
+}
+
+
+.lg-card-description {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+}
+
+
+.lg-card:hover .lg-card-description {
+	opacity:		1;	/* マスクを表示する */
+	padding-top:		80px;	/* ホバーで下にずらす */
+  animation: hovercard .3s ease;
+  -webkit-animation: hovercard .3s ease;
+}
+
+
+
+.lg-card-description-text {
+  position: relative;
+  text-align: left;
+  width: 80%;
+  left: 45px;
+  font-size: 20px;
+}
+
+
+.lg-card-description-md {
+  display: block;
+  position: absolute;
+  top: 130px;
+  left:350px;
+  color: #fff;
+  font-size: 20px !important;
+  line-height: 1.5;
+  width: 420px;
+  text-align: left;
+}
+
+.lg-card-description-large {
+  display: block;
+  position: absolute;
+  top: 130px;
+  left: 600px;
+  color: #fff;
+  font-size: 20px !important;
+  line-height: 1.5;
+  width: 630px;
+  text-align: left;
+}
+
+
+.lg-card-button-area {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 270px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+/*
+*
+* Sub component of LG card
+*
+*/
+.lg-card-search-top {
+  height: 450px;
+}
+
+
+/* Image Layout */
+
+.lg-card-img {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 210px;
+}
+
+
+.lg-card-img-large {
+  display: block;
+  position: relative;
+  margin-left: 60px;
+  margin-right: auto;
+  overflow-y: hidden;
+  height: 220px;
+}
+
+
+
+.lg-card-img-midium {
+  display: block;
+  position: relative;
+  margin-left: 60px;
+  margin-right: auto;
+  overflow-y: hidden;
+  height: 220px;
+}
+
+
+// Hide overflow
+.lg-card,
+.lg-card-description,
+.lg-card-title {
+  overflow: hidden;
+}
+
+// Card radius
+.card-left-top-radius {
+  border-top-left-radius: 9px;
+}
+
+.card-right-top-radius {
+  border-top-right-radius: 9px;
+}
+
+.card-left-bottom-radius {
+  border-bottom-left-radius: 9px;
+}
+
+.card-right-bottom-radius {
+  border-bottom-right-radius: 9px;
+}
+
+// Hover animation
+@keyframes hovercard {
+  0% {
+    opacity: 0;
+    transform: scale3d(1, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 0);
+  }
+}
+
+@-webkit-keyframes hovercard {
+   0% {
+    opacity: 0;
+    transform: scale3d(1, 0, 0);
+   }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 0);
+  }
+}
+

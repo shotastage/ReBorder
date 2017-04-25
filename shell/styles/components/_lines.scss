@@ -1,0 +1,22 @@
+.line {
+    display: inline-block;
+    position: relative;
+    height: 15px;
+    width: 100%;
+    background: red;
+    z-index: 200;
+    border-radius: 8px;
+
+}
+
+.lg-nav-line {
+    height: 7px;
+}
+
+.line-yellow {
+    background: #F7CA18;
+}
+
+.line-blue {
+    background: #19B5FE;
+}

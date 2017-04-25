@@ -1,0 +1,22 @@
+
+[class^="col"] {
+	$padding: 0px;
+	padding-right: $padding;
+    padding-left: $padding;
+	margin-top: -3px;
+    margin-bottom: -3px;
+
+	@media screen and (max-width: 993px) {
+		margin-top: -10px;
+    	margin-bottom: -10px;;
+	}
+}
+
+
+
+.container {
+	position: relative;
+	//width: 100vw !important;
+//	padding-right: 15px;
+//    padding-left: 15px;
+}

@@ -1,0 +1,63 @@
+
+
+.form {
+
+    // Reset default styles
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-appearance: none; 
+    -moz-apperance: none;
+
+    // Styles
+    border-radius: 6px;
+    color: #333;
+    height: 50px;
+    width: 340px;
+    background: /*rgba(0,0,0,0.3)*/ #f1f1f1;
+    border-left: solid 20px rgba(0,0,0,0);
+
+    &:focus {
+        font-size: 20px;
+    }
+    font-weight: 800;
+}
+
+
+.login-card {
+    position: relative;
+    left: 25%;
+    width: 400px;
+    height: 500px;
+    background: /*rgba(0,0,0,0.3)*/ #fff;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+
+    .login {
+        height: 300px;
+    }
+
+    h1 {
+        padding: 20px;
+        font-size: 42px;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
+
+.login-card.signup {
+    height: 450px;
+}
+
+.login-card.login {
+    height: 345px;
+}
+
+
+.msg-error {
+    color: #DA4453;
+}

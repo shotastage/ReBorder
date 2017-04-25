@@ -1,0 +1,17 @@
+.navbar {
+    background: #fff;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-family: 'Comfortaa', cursive;
+    font-size: 35px;
+    color: #333 !important;
+}
+
+
+.navbar-brand:hover,
+.navbar-brand::before,
+.navbar-brand::after {
+    color: #333;
+}

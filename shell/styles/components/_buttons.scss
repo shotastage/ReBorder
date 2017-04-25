@@ -1,0 +1,160 @@
+// Reset button style.
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-color: transparent;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+
+
+.button {
+    $btn-height: 50px;
+
+    display: inline-block;
+    width: 160px;
+    height: $btn-height;
+    line-height: $btn-height;
+    color: #fff;
+    background: #45ddb7;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 16px;
+    font-size: 18px;
+    outline: none;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+    &:hover {
+        text-decoration: none;
+        background: #fff;
+        border: solid 2px #45ddb7;
+        color: #45ddb7;
+    }
+}
+
+
+
+.login-button {
+    box-shadow: none;
+
+    &:hover {
+        text-decoration: none;
+        
+        border: solid 2px #45ddb7;
+        color: #45ddb7;
+    }
+}
+
+
+
+.round {
+    border-radius: 30px;
+}
+
+
+.outline {
+    background: transparent;
+    border: solid 1.9px #fff;
+}
+.outline.starts {
+    border-color: #333;
+    color: #333;
+}
+
+
+
+#signup, #login {
+    $btn-height: 40px;
+    height: 40px;
+    line-height: $btn-height - 1.9px;
+    width: 140px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, .2);
+    color: #333;
+}
+
+#signup:hover,
+#login:hover {
+    background: #fff;
+    color: #333;
+}
+
+
+
+
+// Apply animation
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+
+
+/* Navigation Buttons */
+.nav-button {
+    display: inline-block;
+    width: 130px;
+    top: 10px;
+    height: 15px;
+    line-height: 60px;
+    color: #333 !important;
+    background: #E6E9ED;
+    border-radius: 28px;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+
+
+
+
+/* START CARD BUTTONS */
+.lg-card-button {
+    $button-height: 43px;
+    display: inline-block;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	height: $button-height;
+	line-height: $button-height - 4px;
+    width: 140px;
+    border: solid 2px #fff;
+    border-radius: 5px;
+    background: /*rgba(89, 89, 89, 0.61)*/ transparent;
+
+
+    &:hover {
+        text-decoration: none;
+        letter-spacing: 2px;
+        background: /*rgba(59, 59, 59, 0.81)*/ transparent;
+        color: #fff;
+    }
+}
+
+// Apply animation
+.lg-card-button,
+.lg-card-button::before,
+.lg-card-button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .2s;
+    -moz-transition: all .2s;
+	transition: all .2s;
+}
