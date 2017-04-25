@@ -6,9 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "build-sass": "node-sass --include-path scss ./styles/app.scss ./styles/app.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
   "author": "Shota Shimazu",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.5.2"
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
   }
 }

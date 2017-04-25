@@ -14,6 +14,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Iceland");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -5157,3 +5158,19 @@ button {
 .window {
   position: relative;
   left: 30px; }
+
+.sc_card {
+  background: red;
+  height: 290px;
+  width: 500px;
+  border-radius: 8px; }
+
+.sc_account_name {
+  color: #fff;
+  font-size: 1.5rem; }
+
+.sc_name {
+  font-family: 'Iceland', cursive;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 6px; }
