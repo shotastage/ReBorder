@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class UserProfile(models.Model):
+    user_id = models.IntegerField
     user_first_name = models.CharField(max_length=100)
     user_last_name = models.CharField(max_length=100)
     user_student_id = models.CharField(max_length=8)
@@ -14,3 +15,9 @@ class GameSession(models.Model):
     session_id = models.CharField(max_length=100)
     isEnable = models.BooleanField
     isRevoked = models.BooleanField
+
+
+
+class SuperAdmin(models.Model):
+    super_session_id = models.CharField(max_length=100)
+    super_session_is_locked = models.BooleanField
