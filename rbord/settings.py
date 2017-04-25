@@ -130,7 +130,7 @@ STATIC_URL = '/static/'
 
 # Login redirect URL
 # If the auth success, we'll redirect this url.
-LOGIN_REDIRECT_URL = '/pay/'
+LOGIN_REDIRECT_URL = '/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = [
