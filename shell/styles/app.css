@@ -14,7 +14,7 @@
  */
 /* Document
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css?family=Iceland");
+@import url("https://fonts.googleapis.com/css?family=Iceland|Share+Tech+Mono");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -5160,6 +5160,7 @@ button {
   left: 30px; }
 
 .sc_card {
+  position: relative;
   background: #F62459;
   height: 290px;
   width: 500px;
@@ -5170,12 +5171,50 @@ button {
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
     transform: scale(1.05, 1.05); }
 
-.sc_account_name {
+.sc_title {
   color: #fff;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  font-weight: 200; }
+
+.account_number_title {
+  position: absolute;
+  left: 40px;
+  top: 120px; }
+
+.name_title {
+  position: absolute;
+  left: 40px;
+  bottom: 45px; }
+
+.sc_card_name {
+  position: absolute;
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px; }
+
+.sc_account_number {
+  position: absolute;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3.5rem;
+  color: #fff;
+  letter-spacing: 6px;
+  text-shadow: 0.4px 0.4px #aaa, 0.8px 0.8px #999, 1.2px 1.2px #888;
+  left: 50px;
+  top: 160px; }
 
 .sc_name {
+  position: absolute;
   font-family: 'Iceland', cursive;
   font-size: 3rem;
   color: #fff;
-  letter-spacing: 6px; }
+  letter-spacing: 6px;
+  bottom: 5px;
+  left: 50px;
+  text-shadow: 0.4px 0.4px #aaa, 0.8px 0.8px #999, 1.2px 1.2px #888; }
+
+.sc_remaining {
+  position: absolute;
+  font-size: 6rem;
+  color: #fff;
+  left: 40px;
+  top: 32px; }
