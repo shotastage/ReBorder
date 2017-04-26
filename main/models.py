@@ -9,8 +9,9 @@ class UserProfile(models.Model):
 
 
 
-class GameSession(models.Model):
+class GameSessionData(models.Model):
     session_id = models.CharField(max_length=100)
+    session_passwd = models.CharField(max_length=4)
     isEnable = models.BooleanField
     isRevoked = models.BooleanField
 
