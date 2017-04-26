@@ -44,3 +44,12 @@ class DillerView(View):
                 })
         else:
             return render(request, 'pages/login.html')
+
+
+class DillerSessionView(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            return render(request, 'pages/session.html')
+        else:
+            return render(request, 'pages/login.html')
+
