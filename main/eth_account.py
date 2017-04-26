@@ -13,6 +13,6 @@ class SFCoinAccount:
             n[i] = int(list(tmp[i])[0]) + int(list(tmp[i])[1])
 
 
-sfc = SFCoinAccount()
+#sfc = SFCoinAccount()
 
-print(sfc.detectSFCoinAcName("0xf3c986c3d8e2481b3be06ec195beb665f578dd78"))
+#print(sfc.detectSFCoinAcName("0xf3c986c3d8e2481b3be06ec195beb665f578dd78"))
