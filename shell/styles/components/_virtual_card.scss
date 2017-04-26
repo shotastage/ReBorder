@@ -2,7 +2,13 @@
 
 
 .sc_card {
-  position: relative;
+  display: block;
+  //-webkit-transform: translateY(-50%); /* Safari用 */
+  //transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   background: #F62459;
   height: 290px;
   width: 500px;
@@ -12,6 +18,8 @@
 
   &:hover {
     box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+    //-webkit-transform: translateY(-50%); /* Safari用 */
+    //transform: translateY(-50%);
     transform: scale(1.05,1.05);
   }
 }
@@ -81,4 +89,9 @@
 
 .sc_unit {
   font-size: 2rem;
+}
+
+
+.sc_card_area {
+  height: 100vh;
 }

@@ -5161,7 +5161,11 @@ button {
   left: 30px; }
 
 .sc_card {
-  position: relative;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   background: #F62459;
   height: 290px;
   width: 500px;
@@ -5222,6 +5226,9 @@ button {
 
 .sc_unit {
   font-size: 2rem; }
+
+.sc_card_area {
+  height: 100vh; }
 
 .visible {
   display: none; }
