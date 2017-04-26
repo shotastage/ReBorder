@@ -5,6 +5,7 @@ from main.models import UserProfile
 
 # Import modules
 from main.card import CardManager
+from main.game_session import GameSession
 
 class MainView(View):
 
@@ -47,9 +48,14 @@ class DillerView(View):
 
 
 class DillerSessionView(View):
+    sess = GameSession()
+
     def get(self, request):
         if request.user.is_authenticated:
-            return render(request, 'pages/session.html')
+            session_info = self.sess.createSession()
+            return render(request, 'pages/session.html', {
+                'session_pin': session_info[1]
+            })
         else:
             return render(request, 'pages/login.html')
 

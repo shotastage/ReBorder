@@ -22,7 +22,7 @@ class GameSession():
             session_id = session_id,
             session_passwd = session_enrollment_pass,
             isEnable = True,
-            isRevoked = False,
+            isRevoked = False
         )
         session.save()
 

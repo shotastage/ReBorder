@@ -14,10 +14,20 @@
   </div>
 
   <div class="row">
+    <p>{{ session_pin }}</p>
+  </div>
+
+  <div class="row">
     <div class="col-12">
       <a class="button round" href="/logout/">End Session</a>
     </div>
   </div>
 </div>
+
+<script>
+  window.onbeforeunload = function(e) {
+    e.returnValue = "ここでページを閉じるとゲームのセッションが無効化されます。よろしいですか？";
+  }
+</script>
 
 {% endblock content %}
