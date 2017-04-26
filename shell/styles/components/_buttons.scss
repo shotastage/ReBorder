@@ -68,6 +68,16 @@ button {
 }
 
 
+.btn_menu {
+    $size: 150px;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    text-align: center;
+    line-height: $size;
+    font-weight: 700;
+    font-size: 3rem;
+}
 
 #logout, #signup, #login {
     $btn-height: 40px;

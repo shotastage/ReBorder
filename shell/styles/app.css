@@ -4662,6 +4662,15 @@ button {
   border-color: #333;
   color: #333; }
 
+.btn_menu {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-weight: 700;
+  font-size: 3rem; }
+
 #logout, #signup, #login {
   height: 40px;
   line-height: 38.1px;
