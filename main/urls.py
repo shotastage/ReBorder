@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from main.views import MainView
+from main.views import MainView, DillerView
 
 
 urlpatterns = [
     url(r'^$', MainView.as_view(), name='index'),
+    url(r'^diller/$', DillerView.as_view(), name='diller'),
 ]
