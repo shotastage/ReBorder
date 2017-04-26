@@ -36,7 +36,7 @@ class DillerView(View):
             card_account_number = self.card.getAccountNumber()
             card_remaining_conins = self.card.getRemainingCoins()
 
-            return render(request, 'pages/index.html',
+            return render(request, 'pages/diller.html',
                 {
                     'card_name': card_user_name,
                     'card_account_number': card_account_number,

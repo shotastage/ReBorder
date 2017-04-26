@@ -1,0 +1,31 @@
+{% extends '../templates/base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="col-md-6 sc_card_area">
+    <div class="sc_card">
+      <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
+      <h2 class="sc_title account_number_title">Account Number</h2>
+      <p class="sc_account_number">{{ card_account_number }}</p>
+
+      <h2 class="sc_title name_title">NAME</h2>
+      <p class="sc_name">{{ card_name }}</p>
+      <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+    </div>
+  </div>
+
+
+  <div class="col-md-6 sc_card_area">
+    <div class="sc_card">
+      <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
+      <h2 class="sc_title account_number_title">Account Number</h2>
+      <p class="sc_account_number">{{ card_account_number }}</p>
+
+      <h2 class="sc_title name_title">NAME</h2>
+      <p class="sc_name">{{ card_name }}</p>
+      <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
