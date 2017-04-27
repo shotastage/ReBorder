@@ -18,6 +18,8 @@ class GameSession():
         session_id = uuid.uuid4()
         session_enrollment_pass = self.util.genPass()
 
+        enabling = True
+        revoke = False
         session = GameSessionData(
             session_id = session_id,
             session_passwd = session_enrollment_pass,
