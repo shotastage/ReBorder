@@ -16,9 +16,6 @@ class GameSessionData(models.Model):
     members = models.CharField(max_length=900, null=True)
     isRevoked = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.isRevoked
-
 
 class SuperAdmin(models.Model):
     super_session_id = models.CharField(max_length=100)

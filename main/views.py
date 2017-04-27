@@ -63,10 +63,7 @@ class DillerSessionView(View):
             return render(request, 'pages/login.html')
 
     def post(self, request):
-        if request.user.is_authenticated:
-            req_type = request.POST['post_type']
-            if req_type == "end_session":
-                self.sess.revokeSession(self.session_info)
-                return HttpResponseRedirect('/')
-        else:
-            return render(request, 'pages/login.html')
+        req_type = request.POST['post_type']
+        if req_type == "end_session":
+            self.sess.revokeSession(self.session_info)
+            return HttpResponseRedirect('/')

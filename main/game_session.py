@@ -31,7 +31,10 @@ class GameSession():
         return (session_id, session_enrollment_pass)
 
 
-    def revokeSession(self, session_info):
-        revoking_session = GameSessionData.objects.get(session_id=session_info)
-        revoking_session.isRevoked = True
-        revoking_session.save()
+    def revokeSession(self, session):
+        revoking_session = GameSessionData.objects.raw(
+            'UPDATE main_gamesessiondata SET isRevoked=TRUE WHERE session_id=\'' + session[0] + '\';'
+        )
+        #print(revoking_session.session_passwd)
+        #revoking_session.isRevoked = True
+        #revoking_session.save()
