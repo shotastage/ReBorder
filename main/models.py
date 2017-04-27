@@ -9,6 +9,7 @@ class UserProfile(models.Model):
 
 
 
+# Sd
 class GameSessionData(models.Model):
     session_id = models.CharField(max_length=100)
     session_passwd = models.CharField(max_length=4)
@@ -17,7 +18,6 @@ class GameSessionData(models.Model):
 
     def __str__(self):
         return self.isRevoked
-
 
 
 class SuperAdmin(models.Model):

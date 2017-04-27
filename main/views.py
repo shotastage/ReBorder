@@ -50,11 +50,14 @@ class DillerView(View):
 class DillerSessionView(View):
     sess = GameSession()
 
+    session_info = ("", "")
+
     def get(self, request):
         if request.user.is_authenticated:
-            session_info = self.sess.createSession()
+            self.session_info = self.sess.createSession()
+            self.sessino_id = self.session_info[1]
             return render(request, 'pages/session.html', {
-                'session_pin': session_info[1]
+                'session_pin': self.session_info[1]
             })
         else:
             return render(request, 'pages/login.html')
@@ -62,9 +65,8 @@ class DillerSessionView(View):
     def post(self, request):
         if request.user.is_authenticated:
             req_type = request.POST['post_type']
-
             if req_type == "end_session":
-                pass
-
+                self.sess.revokeSession(self.session_info)
+                return HttpResponseRedirect('/')
         else:
             return render(request, 'pages/login.html')

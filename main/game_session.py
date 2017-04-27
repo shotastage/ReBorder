@@ -1,7 +1,6 @@
+from .models import GameSessionData
 import uuid
 import random
-from django.db import models
-from main.models import GameSessionData
 
 
 class SessionUtils():
@@ -12,6 +11,9 @@ class SessionUtils():
         d = str(random.randrange(10))
 
         return a + b + c + d
+
+
+
 
 class GameSession():
     util = SessionUtils()
@@ -29,8 +31,7 @@ class GameSession():
         return (session_id, session_enrollment_pass)
 
 
-    def revokeSession(self, session_id):
-        revoking_session = GameSessionData.objects.get('session_id'="session_id")
+    def revokeSession(self, session_info):
+        revoking_session = GameSessionData.objects.get(session_id=session_info)
         revoking_session.isRevoked = True
         revoking_session.save()
-        pass
