@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from main.views import MainView, DillerView, DillerSessionView
+from main.views import MainView, DillerView, DillerSessionView, PairingView
 
 
 urlpatterns = [
     url(r'^$', MainView.as_view(), name='index'),
     url(r'^diller/$', DillerView.as_view(), name='diller'),
     url(r'^diller/new_session/$', DillerSessionView.as_view(), name='session'),
+    url(r'^paring/$', PairingView.as_view(), name='paring'),
 ]

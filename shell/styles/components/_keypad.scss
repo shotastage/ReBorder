@@ -1,0 +1,83 @@
+
+.key {
+  background-color: #F8F9FA;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 48px;
+  min-width: 48px;
+  width: 100%;
+  padding: 8px;
+  -webkit-user-select:none;
+  user-select:none;
+  transition: all 0.3s ease-in-out;
+}
+
+.number {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #212529;
+  opacity: 1.00;
+  text-align: center;
+}
+
+.letter {
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: #868E96;
+  line-height: 16px;
+  text-align: center;
+}
+
+.number, .letter {
+  height: 100%;
+  width: 100%;
+}
+
+.key:hover {
+  background-color: #E9ECEF;
+  z-index: 5000;
+  box-shadow: 0px 4px 16px rgba(33, 37, 41, 0.3);
+}
+
+.key:hover .number {
+  font-size:  20px;
+  transition: all 0.1s ease-in;
+}
+
+.key:hover .letter {
+  font-size:  14px;
+  transition: all 0.1s ease-in;
+}
+
+.key:active {
+  background-color: #212529;
+  box-shadow: 0px 4px 16px rgba(33, 37, 41, 0.5); 
+  z-index: 5000;
+  transition: all 0.05s ease-in;
+}
+
+.key:active .number {
+  color: #F8F9FA;
+}
+
+.key:active .letter {
+  color: #DEE2E6;
+}
+
+
+.dialpad {
+  background-color: #F8F9FA;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+/*   height: 400px; */
+  width: 372px;
+}
+.dialpad-row {
+  display: flex;
+  width: 100%;
+}
+

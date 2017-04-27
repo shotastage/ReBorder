@@ -66,3 +66,11 @@ class DillerSessionView(View):
         if req_type == "end_session":
             self.sess.revokeSession(session_id)
             return HttpResponseRedirect('/')
+
+
+class PairingView(View):
+    def get(self, request):
+        if request.user.is_authenticated:
+            return render(request, 'pages/pairing.html')
+        else:
+            return render(request, 'pages/login.html')

@@ -1,0 +1,96 @@
+{% extends '../templates/base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="dialpad">
+      <div class="dialpad-row">
+        <div class="key">
+          <div class="number">
+            1
+          </div>
+
+        </div>
+        <div class="key">
+          <div class="number">
+            2
+          </div>
+        </div>
+        <div class="key">
+          <div class="number">
+            3
+          </div>
+        </div>
+      </div>
+      <div class="dialpad-row">
+        <div class="key">
+          <div class="number">
+            4
+          </div>
+        </div>
+        <div class="key">
+          <div class="number">
+            5
+          </div>
+        </div>
+        <div class="key">
+          <div class="number">
+            6
+          </div>
+        </div>
+      </div>
+      <div class="dialpad-row">
+
+
+      <div class="key">
+        <div class="number">
+          7
+        </div>
+      </div>
+      <div class="key">
+        <div class="number">
+          8
+        </div>
+      </div>
+      <div class="key">
+        <div class="number">
+          9
+        </div>
+      </div>
+    </div>
+    <div class="dialpad-row">
+      <div class="key">
+        <div class="number">
+          *
+        </div>
+      </div>
+
+      <div class="key">
+        <div class="number">
+          0
+        </div>
+      </div>
+      <div class="key">
+        <div class="number">
+          #
+        </div>
+        <div class="letter">
+          <!--no letter-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<form method="post" role="form">{% csrf_token %}
+  <input name="session_id" type="hidden" value="">
+  <input name="next" type="hidden" value="{{ next }}"/>
+  <button class="button round" type="submit" href="/">Pairing</button>
+</form>
+
+
+
+{% endblock content %}
