@@ -1,4 +1,6 @@
 from .models import GameSessionData
+from django.db import models
+
 import uuid
 import random
 
@@ -32,9 +34,6 @@ class GameSession():
 
 
     def revokeSession(self, session):
-        revoking_session = GameSessionData.objects.raw(
-            'UPDATE main_gamesessiondata SET isRevoked=TRUE WHERE session_id=\'' + session[0] + '\';'
-        )
-        #print(revoking_session.session_passwd)
-        #revoking_session.isRevoked = True
-        #revoking_session.save()
+        print("THISs")
+        print(session)
+        revoking_session = GameSessionData.objects.filter(session_id=session).update(isRevoked=True)

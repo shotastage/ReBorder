@@ -21,6 +21,7 @@
     <div class="col-12">
       <form method="post" role="form">{% csrf_token %}
         <input name="post_type" type="hidden" value="end_session">
+        <input name="session_id" type="hidden" value="{{ session_id }}">
         <input name="next" type="hidden" value="{{ next }}"/>
         <button class="button round" type="submit" href="/">End Session</button>
       </form>
