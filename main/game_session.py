@@ -30,6 +30,7 @@ class GameSession():
 
 
     def revokeSession(self, session_id):
-        session = GameSessionData(session_id = session_id)
-        session.isRevoked = True
-        session.save()
+        revoking_session = GameSessionData.objects.get('session_id'="session_id")
+        revoking_session.isRevoked = True
+        revoking_session.save()
+        pass
