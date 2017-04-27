@@ -19,7 +19,11 @@
 
   <div class="row">
     <div class="col-12">
-      <a class="button round" href="/logout/">End Session</a>
+      <form method="post" role="form">{% csrf_token %}
+        <input name="post_type" type="hidden" value="end_session">
+        <input name="next" type="hidden" value="{{ next }}"/>
+        <button class="button round" type="submit" href="/">End Session</button>
+      </form>
     </div>
   </div>
 </div>

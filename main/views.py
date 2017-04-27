@@ -59,3 +59,12 @@ class DillerSessionView(View):
         else:
             return render(request, 'pages/login.html')
 
+    def post(self, request):
+        if request.user.is_authenticated:
+            req_type = request.POST['post_type']
+
+            if req_type == "end_session":
+                pass
+
+        else:
+            return render(request, 'pages/login.html')

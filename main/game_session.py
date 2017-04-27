@@ -1,6 +1,8 @@
 import uuid
 import random
+from django.db import models
 from main.models import GameSessionData
+
 
 class SessionUtils():
     def genPass(self):
@@ -17,15 +19,17 @@ class GameSession():
     def createSession(self):
         session_id = uuid.uuid4()
         session_enrollment_pass = self.util.genPass()
-
-        enabling = True
-        revoke = False
         session = GameSessionData(
             session_id = session_id,
             session_passwd = session_enrollment_pass,
-            isEnable = True,
-            isRevoked = False
+            isRevoked = False,
         )
         session.save()
 
         return (session_id, session_enrollment_pass)
+
+
+    def revokeSession(self, session_id):
+        session = GameSessionData(session_id = session_id)
+        session.isRevoked = True
+        session.save()
