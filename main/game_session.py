@@ -37,7 +37,7 @@ class GameSession():
         GameSessionData.objects.filter(session_id=session).update(isRevoked=True)
 
     def addMember(self, req, passwd):
-        model = GameSessionData.objects.filter(session_passwd=passwd)
-        existing_mem = model.members
+        test = GameSessionData.objects.get(session_passwd=passwd)
+        existing_mem = test.members
         member = existing_mem + ',' + req.user.get_full_name()
-        GameSessionData.objects.filter(sesssion_passwd=passwd).update(members=member)
+        GameSessionData.objects.filter(session_passwd=passwd).update(members=member)
