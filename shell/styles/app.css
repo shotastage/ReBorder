@@ -4816,11 +4816,13 @@ button {
 *
 */
 .lg-card {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   margin: 10px auto;
   margin-top: -5px;
   width: 100%;
-  height: 350px;
+  height: 100%;
   color: #fff;
   text-align: center; }
 
@@ -4930,7 +4932,7 @@ button {
 *
 */
 .lg-card-search-top {
-  height: 450px; }
+  height: 100%; }
 
 /* Image Layout */
 .lg-card-img {
@@ -5245,6 +5247,14 @@ button {
 .invisible {
   display: none; }
 
+.to {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  right: 0;
+  left: 0; }
+
 .key {
   background-color: #F8F9FA;
   cursor: pointer;
@@ -5314,3 +5324,32 @@ button {
 .dialpad-row {
   display: flex;
   width: 100%; }
+
+.search-form {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 6px;
+  text-shadow: 0.4px 0.4px #aaa, 0.8px 0.8px #999, 1.2px 1.2px #888;
+  height: 50px;
+  width: 417px;
+  background: rgba(89, 89, 89, 0.08);
+  border-left: solid 20px transparent;
+  border-radius: 5px; }
+
+.search-button {
+  position: absolute;
+  bottom: 8px;
+  right: 30px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1rem; }
+  .search-button:hover {
+    line-height: 30px;
+    font-size: 1rem; }

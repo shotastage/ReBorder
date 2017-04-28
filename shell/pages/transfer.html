@@ -1,0 +1,52 @@
+{% extends '../templates/base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 sc_card_area">
+
+
+      <div class="sc_card">
+        <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
+        <h2 class="sc_title account_number_title">Account Number</h2>
+        <p class="sc_account_number">
+          {% if card_account_number == "0000-0000-0000-00" %}
+            PLEASE REGISTER
+          {% else %}
+            {{ card_account_number }}
+          {% endif %}</p>
+
+        <h2 class="sc_title name_title">NAME</h2>
+        <p class="sc_name">
+          <input class="search-form" name="password" type="text" placeholder="User Name"/>
+        </p>
+        <a href="" class="button round search-button">REGISTER</a>
+        <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+      </div>
+    </div>
+    <div class="col-md-6 sc_card_area">
+
+
+      <div class="sc_card">
+        <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
+        <h2 class="sc_title account_number_title">Account Number</h2>
+        <p class="sc_account_number">
+          {% if card_account_number == "0000-0000-0000-00" %}
+            PLEASE REGISTER
+          {% else %}
+            {{ card_account_number }}
+          {% endif %}</p>
+
+
+        <h2 class="sc_title name_title">NAME</h2>
+        <p class="sc_name">
+          <input class="search-form" name="password" type="text" placeholder="User Name"/>
+        </p>
+        <a href="" class="button round search-button">REGISTER</a>
+        <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

@@ -5,11 +5,13 @@
 */
 // Card main style
 .lg-card {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   margin: 10px auto;
   margin-top: -5px;
   width: 100%;
-  height: 350px;
+  height: 100%;
   color: #fff;
   text-align: center;
 }
@@ -144,7 +146,7 @@
 *
 */
 .lg-card-search-top {
-  height: 450px;
+  height: 100%;
 }
 
 

@@ -39,5 +39,5 @@ class GameSession():
     def addMember(self, req, passwd):
         test = GameSessionData.objects.get(session_passwd=passwd)
         existing_mem = test.members
-        member = existing_mem + ',' + req.user.get_full_name()
+        member = existing_mem + ',' + req.user.get_username()
         GameSessionData.objects.filter(session_passwd=passwd).update(members=member)

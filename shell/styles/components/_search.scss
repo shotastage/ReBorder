@@ -1,0 +1,42 @@
+$form-height: 50px;
+
+
+.search-form {
+
+    // Reset default styles
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-apperance: none;
+
+    // Styles
+    font-size: 3rem;
+    color: #fff;
+    letter-spacing: 6px;
+    text-shadow:
+        0.4px 0.4px #aaa,
+        0.8px 0.8px #999,
+        1.2px 1.2px #888;
+    height: $form-height;
+    width: 417px;
+    background: rgba(89, 89, 89, 0.08);
+    border-left: solid 20px rgba(0,0,0,0);
+    border-radius: 5px;
+}
+
+.search-button {
+    position: absolute;
+    bottom: 8px;
+    right: 30px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 1rem;
+
+    &:hover {
+        line-height: 30px;
+        font-size: 1rem;
+    }
+}
