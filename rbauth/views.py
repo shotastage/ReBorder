@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from main.models import UserProfile
 from rbauth.validator import Validation
+from rbauth.eth_account import EthAccount
 
 # Create an instance of checking methods.
 VALID = Validation()
@@ -90,4 +91,7 @@ class Signup(View):
                     user_student_id = student_id,
             )
             rb_user.save()
+
+            eth = EthAccount()
+            eth.createAccount(password)
             return HttpResponseRedirect('/login/')
