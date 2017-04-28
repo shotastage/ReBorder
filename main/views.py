@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from main.models import UserProfile
+from main.models import UserProfile, GameSessionData
 
 # Import modules
 from main.card import CardManager
@@ -69,8 +69,22 @@ class DillerSessionView(View):
 
 
 class PairingView(View):
+    sess = GameSession()
+
+
     def get(self, request):
         if request.user.is_authenticated:
             return render(request, 'pages/pairing.html')
         else:
             return render(request, 'pages/login.html')
+
+    def post(self, request):
+        passcode = request.POST['passcode']
+        for db in GameSessionData.objects.all():
+            if passcode == db.session_passwd:
+                if db.isRevoked:
+                    return render(request, 'pages/pairing.html', {'error': "無効なセッションです。"})
+
+                self.sess.addMember(request, passcode)
+                return HttpResponseRedirect('/')
+        return render(request, 'pages/pairing.html', {'error': "パスが違います。"})

@@ -1,6 +1,6 @@
 {% extends '../templates/base.html' %}
 {% block content %}
-
+{{ error }}
 <div class="container">
   <div class="row">
   </div>
@@ -8,74 +8,74 @@
     <div class="dialpad">
       <div class="dialpad-row">
         <div class="key">
-          <div class="number">
+          <button id="key_one" class="number">
             1
-          </div>
+          </button>
 
         </div>
         <div class="key">
-          <div class="number">
+          <button id="key_two" class="number">
             2
-          </div>
+          </button>
         </div>
         <div class="key">
-          <div class="number">
+          <button id="key_three" class="number">
             3
-          </div>
+          </button>
         </div>
       </div>
       <div class="dialpad-row">
         <div class="key">
-          <div class="number">
+          <button id="key_four" class="number">
             4
-          </div>
+          </button>
         </div>
         <div class="key">
-          <div class="number">
+          <button id="key_five" class="number">
             5
-          </div>
+          </button>
         </div>
         <div class="key">
-          <div class="number">
+          <button id="key_six" class="number">
             6
-          </div>
+          </button>
         </div>
       </div>
       <div class="dialpad-row">
 
 
       <div class="key">
-        <div class="number">
+        <button id="key_seven" class="number">
           7
-        </div>
+        </button>
       </div>
       <div class="key">
-        <div class="number">
+        <button id="key_eight" class="number">
           8
-        </div>
+        </button>
       </div>
       <div class="key">
-        <div class="number">
+        <button id="key_nine" class="number">
           9
-        </div>
+        </button>
       </div>
     </div>
     <div class="dialpad-row">
       <div class="key">
-        <div class="number">
+        <button class="number">
           *
-        </div>
+        </button>
       </div>
 
       <div class="key">
-        <div class="number">
+        <button id="key_zero" class="number">
           0
-        </div>
+        </button>
       </div>
       <div class="key">
-        <div class="number">
+        <button class="number">
           #
-        </div>
+        </button>
         <div class="letter">
           <!--no letter-->
         </div>
@@ -86,11 +86,69 @@
 
 
 <form method="post" role="form">{% csrf_token %}
-  <input name="session_id" type="hidden" value="">
+  <input id="pass" name="passcode" type="hidden" value="">
   <input name="next" type="hidden" value="{{ next }}"/>
   <button class="button round" type="submit" href="/">Pairing</button>
 </form>
 
 
+
+<script>
+var keypads0 = document.getElementById("key_zero");
+var keypads1 = document.getElementById("key_one");
+var keypads2 = document.getElementById("key_two");
+var keypads3 = document.getElementById("key_three");
+var keypads4 = document.getElementById("key_four");
+var keypads5 = document.getElementById("key_five");
+var keypads6 = document.getElementById("key_six");
+var keypads7 = document.getElementById("key_seven");
+var keypads8 = document.getElementById("key_eight");
+var keypads9 = document.getElementById("key_nine");
+
+
+var passcode = document.getElementById("pass");
+
+keypads0.addEventListener("click", function () {
+  passcode.value = passcode.value + "0";
+});
+
+keypads1.addEventListener("click", function () {
+  passcode.value = passcode.value + "1";
+});
+
+keypads2.addEventListener("click", function () {
+  passcode.value = passcode.value + "2";
+});
+
+keypads3.addEventListener("click", function () {
+  passcode.value = passcode.value + "3";
+});
+
+keypads4.addEventListener("click", function () {
+  passcode.value = passcode.value + "4";
+});
+
+keypads5.addEventListener("click", function () {
+  passcode.value = passcode.value + "5";
+});
+
+keypads6.addEventListener("click", function () {
+  passcode.value = passcode.value + "6";
+});
+
+keypads7.addEventListener("click", function () {
+  passcode.value = passcode.value + "7";
+});
+
+keypads8.addEventListener("click", function () {
+  passcode.value = passcode.value + "8";
+});
+
+
+keypads9.addEventListener("click", function () {
+  passcode.value = passcode.value + "9";
+});
+
+</script>
 
 {% endblock content %}

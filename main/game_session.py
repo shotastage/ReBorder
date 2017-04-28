@@ -34,6 +34,10 @@ class GameSession():
 
 
     def revokeSession(self, session):
-        print("THISs")
-        print(session)
-        revoking_session = GameSessionData.objects.filter(session_id=session).update(isRevoked=True)
+        GameSessionData.objects.filter(session_id=session).update(isRevoked=True)
+
+    def addMember(self, req, passwd):
+        model = GameSessionData.objects.filter(session_passwd=passwd)
+        existing_mem = model.members
+        member = existing_mem + ',' + req.user.get_full_name()
+        GameSessionData.objects.filter(sesssion_passwd=passwd).update(members=member)
