@@ -52,7 +52,7 @@ class DillerSessionView(View):
 
     def get(self, request):
         if request.user.is_authenticated:
-            session_info = self.sess.createSession()
+            session_info = self.sess.createSession(request)
             return render(request, 'pages/session.html', {
                 'session_id': session_info[0],
                 'session_pin': session_info[1]

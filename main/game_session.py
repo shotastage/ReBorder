@@ -20,13 +20,14 @@ class SessionUtils():
 class GameSession():
     util = SessionUtils()
 
-    def createSession(self):
+    def createSession(self, req):
         session_id = uuid.uuid4()
         session_enrollment_pass = self.util.genPass()
         session = GameSessionData(
             session_id = session_id,
             session_passwd = session_enrollment_pass,
             isRevoked = False,
+            created_by = req.user.get_username()
         )
         session.save()
 
