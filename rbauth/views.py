@@ -87,11 +87,12 @@ class Signup(View):
             user.last_name = last_name
             user.save()
 
+            eth = EthAccount()
+            eth_account = eth.createAccount(password)
             rb_user = UserProfile(
                     user_student_id = student_id,
+                    user_ethereum_account = eth_account,
             )
             rb_user.save()
 
-            eth = EthAccount()
-            eth.createAccount(password)
             return HttpResponseRedirect('/login/')

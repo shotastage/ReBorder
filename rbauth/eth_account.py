@@ -1,5 +1,7 @@
 import pexpect
 import sys
+from main.models import UserProfile
+
 
 class EthAccount():
     def createAccount(self, password):
@@ -24,8 +26,7 @@ class EthAccount():
                 end_index = default_index - 1
             default_index = default_index + 1
 
-
-        print(output[start_index:end_index])
+        return output[start_index:end_index]
 
 
 # b' \r\nAddress: {37b65d8968ce826663ed6f6f0ba94a32981639a6}\r\n'
