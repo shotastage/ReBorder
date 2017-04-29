@@ -20,7 +20,11 @@
         <p class="sc_name">
           <input class="search-form" name="password" type="text" placeholder="User Name"/>
         </p>
-        <a href="" class="button round search-button">REGISTER</a>
+        <form method="post" role="form">{% csrf_token %}
+          <input name="post_type" type="hidden" value="from">
+          <input name="next" type="hidden" value="{{ next }}"/>
+          <button class="button round search-button" type="submit">REGISTER</button>
+        </form>
         <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
       </div>
     </div>

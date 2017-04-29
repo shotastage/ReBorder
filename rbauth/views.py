@@ -92,6 +92,7 @@ class Signup(View):
             rb_user = UserProfile(
                     user_student_id = student_id,
                     user_ethereum_account = eth_account,
+                    user_name_identification = request.user.get_username()
             )
             rb_user.save()
 

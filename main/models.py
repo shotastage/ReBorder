@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 class UserProfile(models.Model):
+    user_name_identification = models.CharField(max_length=100)
     user_student_id = models.CharField(max_length=8)
     user_ethereum_account = models.CharField(max_length=100)
     user_is_admin = models.BooleanField

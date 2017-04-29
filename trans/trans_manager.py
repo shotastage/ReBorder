@@ -5,7 +5,7 @@ class SFCoinTransaction():
 
     @classmethod
     def getEthAccount(self, username):
-        eth_account = UserProfile.objects.filter(user_ethereum_account=username)
+        eth_account = UserProfile.objects.get(user_name_identification=username)
         eth = eth_account.user_ethereum_account
         return eth
 

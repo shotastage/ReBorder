@@ -26,12 +26,15 @@ class Transfer(View):
 
     def post(self, request):
         req_type = request.POST['post_type']
+        card_user_name = self.card.getUserFullName(request)
+        card_account_number = self.card.getAccountNumber()
+        card_remaining_conins = self.card.getRemainingCoins()
 
         if req_type == "from":
-            self.coin.registerFrom(request, username)
-        return render(request, 'pages/transfer.html',
+            self.coin.registerFrom(request, request.user.get_full_name())
+            return render(request, 'pages/transfer.html',
                 {
-                    'card_name': "card_user_name",
-                    'card_account_number': "card_account_number",
-                    'card_remaining_conins': "card_remaining_conins",
+                    'card_name': card_user_name,
+                    'card_account_number': card_account_number,
+                    'card_remaining_conins': card_remaining_conins,
                 })
