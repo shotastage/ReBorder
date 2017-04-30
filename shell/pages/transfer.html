@@ -1,6 +1,8 @@
 {% extends '../templates/base.html' %}
 {% block content %}
 
+<form method="post" role="form">{% csrf_token %}
+
 <div class="container">
   <div class="row">
     <div class="col-md-6 sc_card_area">
@@ -10,47 +12,77 @@
         <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
         <h2 class="sc_title account_number_title">Account Number</h2>
         <p class="sc_account_number">
-          {% if card_account_number == "0000-0000-0000-00" %}
-            PLEASE REGISTER
+          {% if mode == "confirmed" %}
+            {{ card_account_number_from }}
           {% else %}
-            {{ card_account_number }}
+            PLEASE REGISTER
           {% endif %}</p>
 
         <h2 class="sc_title name_title">NAME</h2>
         <p class="sc_name">
-          <input class="search-form" name="password" type="text" placeholder="User Name"/>
+          {% if mode == "confirmed" %}
+            {{ card_name_from }}
+          {% else %}
+            <input class="search-form" name="from_user" type="text" placeholder="From"/>
+          {% endif %}
         </p>
-        <form method="post" role="form">{% csrf_token %}
-          <input name="post_type" type="hidden" value="from">
-          <input name="next" type="hidden" value="{{ next }}"/>
-          <button class="button round search-button" type="submit">REGISTER</button>
-        </form>
+        {% if mode != "confirmed" %}
+        {% endif %}
         <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
       </div>
     </div>
+
+
     <div class="col-md-6 sc_card_area">
-
-
       <div class="sc_card">
         <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
         <h2 class="sc_title account_number_title">Account Number</h2>
         <p class="sc_account_number">
-          {% if card_account_number == "0000-0000-0000-00" %}
-            PLEASE REGISTER
+          {% if mode == "confirmed" %}
+            {{ card_account_number_to }}
           {% else %}
-            {{ card_account_number }}
+            PLEASE REGISTER
           {% endif %}</p>
 
 
         <h2 class="sc_title name_title">NAME</h2>
         <p class="sc_name">
-          <input class="search-form" name="password" type="text" placeholder="User Name"/>
+          {% if mode == "confirmed" %}
+            {{ card_name_to }}
+          {% else %}
+            <input class="search-form" name="to_user" type="text" placeholder="To"/>
+          {% endif %}
         </p>
-        <a href="" class="button round search-button">REGISTER</a>
         <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="trans-area">
+        {% if mode == "confirmed" %}
+            <input value="{{ amount }}" class="trans-form" name="amount" type="text" placeholder="金額"/>
+        {% else %}
+            <input class="trans-form" name="amount" type="text" placeholder="金額"/>
+        {% endif %}
+
+
+
+        {% if mode == "confirmed" %}
+          <input name="post_type" type="hidden" value="transfer"/>
+          <input name="next" type="hidden" value="{{ next }}"/>
+          <button type="submit" class="button round">送金</button>
+        {% else %}
+          <input name="post_type" type="hidden" value="confirm"/>
+          <input name="next" type="hidden" value="{{ next }}"/>
+          <button type="submit" class="button round">確認</button>
+        {% endif %}
+
       </div>
     </div>
   </div>
 </div>
 
+</form>
 {% endblock content %}

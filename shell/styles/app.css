@@ -5241,6 +5241,9 @@ button {
 .sc_card_area {
   height: 100vh; }
 
+.sc_card_area_light {
+  height: 90vh; }
+
 .visible {
   display: none; }
 
@@ -5353,3 +5356,25 @@ button {
   .search-button:hover {
     line-height: 30px;
     font-size: 1rem; }
+
+.trans-area {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  bottom: 20px; }
+
+.trans-form {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  font-size: 2rem;
+  color: #333;
+  letter-spacing: 6px;
+  height: 50px;
+  width: 417px;
+  background: rgba(89, 89, 89, 0.08);
+  border-left: solid 20px transparent;
+  border-radius: 5px; }

@@ -14,8 +14,8 @@ class MainView(View):
     def get(self, request):
         if request.user.is_authenticated:
             card_user_name = self.card.getUserFullName(request)
-            card_account_number = self.card.getAccountNumber()
-            card_remaining_conins = self.card.getRemainingCoins()
+            card_account_number = self.card.getAccountNumber(request)
+            card_remaining_conins = self.card.getRemainingCoins(request)
 
             return render(request, 'pages/index.html',
                 {
@@ -34,8 +34,8 @@ class DillerView(View):
     def get(self, request):
         if request.user.is_authenticated:
             card_user_name = self.card.getUserFullName(request)
-            card_account_number = self.card.getAccountNumber()
-            card_remaining_conins = self.card.getRemainingCoins()
+            card_account_number = self.card.getAccountNumber(request)
+            card_remaining_conins = self.card.getRemainingCoins(request)
 
             return render(request, 'pages/diller.html',
                 {

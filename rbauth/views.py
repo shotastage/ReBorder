@@ -87,12 +87,15 @@ class Signup(View):
             user.last_name = last_name
             user.save()
 
+            # Create ethereum account
             eth = EthAccount()
             eth_account = eth.createAccount(password)
+
             rb_user = UserProfile(
                     user_student_id = student_id,
                     user_ethereum_account = eth_account,
-                    user_name_identification = request.user.get_username()
+                    user_name_identification = username,
+                    charged_amount = 0,
             )
             rb_user.save()
 
