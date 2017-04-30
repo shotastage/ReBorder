@@ -5284,8 +5284,18 @@ button {
   margin: auto;
   z-index: 5;
   width: 40vw;
-  height: 290px;
+  height: 180px;
   right: 0; }
+
+/* Pairing */
+.pairing_button_area {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0px;
+  margin: auto; }
 
 .key {
   background-color: #F8F9FA;
@@ -5351,7 +5361,11 @@ button {
   flex-wrap: wrap;
   overflow: hidden;
   /*   height: 400px; */
-  width: 372px; }
+  width: 372px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto; }
 
 .dialpad-row {
   display: flex;

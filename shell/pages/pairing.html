@@ -5,6 +5,7 @@
   <div class="row">
   </div>
   <div class="row">
+    <div class="col-md-12">
     <div class="dialpad">
       <div class="dialpad-row">
         <div class="key">
@@ -81,15 +82,19 @@
         </div>
       </div>
     </div>
+    </div>
   </div>
+
+
+      <form method="post" role="form">{% csrf_token %}
+        <input id="pass" name="passcode" type="hidden" value="">
+        <input name="next" type="hidden" value="{{ next }}"/>
+        <div class="pairing_button_area">
+          <button class="button round" type="submit" href="/">Pairing</button>
+        </div>
+      </form>
+    
 </div>
-
-
-<form method="post" role="form">{% csrf_token %}
-  <input id="pass" name="passcode" type="hidden" value="">
-  <input name="next" type="hidden" value="{{ next }}"/>
-  <button class="button round" type="submit" href="/">Pairing</button>
-</form>
 
 
 
