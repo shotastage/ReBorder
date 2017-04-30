@@ -16,9 +16,9 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
-from charge.views import Charge
+from charge.views import ChargeView
 
 
 urlpatterns = [
-    url(r'^charge/', Charge.as_view(), name='charge'),
+    url(r'^charge/', ChargeView.as_view(), name='charge'),
 ]

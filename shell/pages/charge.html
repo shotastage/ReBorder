@@ -1,27 +1,48 @@
 {% extends '../templates/base.html' %}
 {% block content %}
+<form method="post" role="form">{% csrf_token %}
+
 
 <div class="container">
   <div class="col-md-6 sc_card_area">
     <div class="sc_card">
       <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
       <h2 class="sc_title account_number_title">Account Number</h2>
-      <p class="sc_account_number">{{ card_account_number }}</p>
+      <p class="sc_account_number">
+        {% if mode == "confirmed" %}
+          {{ card_account_number_target }}
+        {% else %}
+          PLEASE REGISTER
+        {% endif %}</p>
 
-      <h2 class="sc_title name_title">NAME</h2>
-      <p class="sc_name">{{ card_name }}</p>
-      <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
-    </div>
+        <h2 class="sc_title name_title">NAME</h2>
+        <p class="sc_name">
+          {% if mode == "confirmed" %}
+            {{ card_name_target }}
+            <input name="target_user" type="hidden" value="{{ card_name_target }}"/>
+          {% else %}
+            <input class="search-form" name="target_user" type="text" placeholder="Target"/>
+          {% endif %}
+        </p>
+        {% if mode != "confirmed" %}
+        {% endif %}
+        <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+      </div>
   </div>
 
   <div class="col-md-6">
     <div class="row">
-      <a class="button round btn_menu" href="/paring/">Pairing</a>
+      <input name="next" type="hidden" value="{{ next }}"/>
+      {% if mode == "confirmed" %}
+        <input value="{{ amount }}" class="trans-form" name="amount" type="text" placeholder="金額"/>
+        <input name="post_type" type="hidden" value="charge"/>
+        <button class="button round btn_menu" type="submit">チャージ</button>
+      {% else %}
+        <input class="trans-form" name="amount" type="text" placeholder="金額"/>
+        <input name="post_type" type="hidden" value="confirm"/>
+        <button class="button round btn_menu" type="submit">確認</button>
+      {% endif %}
     </div>
-    <div class="row">
-      <a class="button round btn_menu" href="/diller/">Diller</a>
-    </div>
-    <a class="button round" href="/logout/">Logout</a>
   </div>
 </div>
 

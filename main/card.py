@@ -79,3 +79,8 @@ class CardManager():
         amount_obj = UserProfile.objects.get(user_name_identification=req.user.get_username())
         amount = amount_obj.charged_amount
         return str(amount)
+
+    def getRemainingCoinsByUserName(self, username):
+        amount_obj = UserProfile.objects.get(user_name_identification=username)
+        amount = amount_obj.charged_amount
+        return int(amount)
