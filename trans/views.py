@@ -26,15 +26,19 @@ class Transfer(View):
 
     def post(self, request):
         req_type = request.POST['post_type']
+        from_user = request.POST['from_user']
+        to_user = request.POST['to_user']
+        amount = request.POST['amount']
 
         if req_type == "transfer":
+            amount = int(amount)
+
+            self.coin.transfer(from_user, to_user, amount)
             return HttpResponseRedirect('/diller/')
+
+
         if req_type == "confirm":
             #self.coin.registerFrom(request, request.user.get_full_name())
-            from_user = request.POST['from_user']
-            to_user = request.POST['to_user']
-            amount = request.POST['amount']
-
 
             card_user_name_from = from_user
             card_account_number_from = self.card.getAccountNumberByUserName(from_user)

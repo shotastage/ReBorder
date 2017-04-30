@@ -22,6 +22,7 @@
         <p class="sc_name">
           {% if mode == "confirmed" %}
             {{ card_name_from }}
+            <input name="from_user" type="hidden" value="{{ card_name_from }}"/>
           {% else %}
             <input class="search-form" name="from_user" type="text" placeholder="From"/>
           {% endif %}
@@ -49,6 +50,7 @@
         <p class="sc_name">
           {% if mode == "confirmed" %}
             {{ card_name_to }}
+            <input name="to_user" type="hidden" value="{{ card_name_to }}"/>
           {% else %}
             <input class="search-form" name="to_user" type="text" placeholder="To"/>
           {% endif %}
