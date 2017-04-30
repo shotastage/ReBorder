@@ -1,28 +1,32 @@
 {% extends '../templates/base.html' %}
 {% block content %}
-
 <div class="container">
-  <div class="col-md-6 sc_card_area">
-    <div class="sc_card">
-      <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
-      <h2 class="sc_title account_number_title">Account Number</h2>
-      <p class="sc_account_number">{{ card_account_number }}</p>
+  <div class="row">
+    <div class="com-md-6">
+      <div class="sc_card_area">
+        <div class="sc_card">
+          <h4 class="sc_card_name">◀︎ SFC Virtual Coin Card</h1>
+          <h2 class="sc_title account_number_title">Account Number</h2>
+          <p class="sc_account_number">{{ card_account_number }}</p>
 
-      <h2 class="sc_title name_title">NAME</h2>
-      <p class="sc_name">{{ card_name }}</p>
-      <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+          <h2 class="sc_title name_title">NAME</h2>
+          <p class="sc_name">{{ card_name }}</p>
+          <h1 class="sc_remaining">{{ card_remaining_conins }} <span class="sc_unit">SFCoin</span></h1>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-6">
-    <div class="row">
-      <a class="button round btn_menu" href="/paring/">Pairing</a>
+
+    <div class="com-md-6">
+      <div class="index_button_area">
+        <a class="button round btn_menu circle-button" href="/paring/">開始</a>
+        <a class="button round btn_menu button-red circle-button" href="/diller/">ディーラー</a>
+      </div>
     </div>
-    <div class="row">
-      <a class="button round btn_menu" href="/diller/">Diller</a>
-    </div>
-    <a class="button round" href="/logout/">Logout</a>
+    <!--<a class="button round" href="/logout/">ログアウト</a>-->
   </div>
 </div>
+
+
 
 {% endblock content %}

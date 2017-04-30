@@ -169,3 +169,26 @@ button {
     -moz-transition: all .2s;
 	transition: all .2s;
 }
+
+
+/* Colors */
+.button-red {
+    background: #EC87C0;
+    &:hover {
+        color: #EC87C0;
+        border-color: #EC87C0;
+    }
+}
+
+
+
+.btn-area {
+    position: relative;
+}
+
+
+.circle-button {
+    display: flex;          /* 2 */
+    justify-content: center;/* 3 */
+    align-items: center;
+}

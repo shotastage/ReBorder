@@ -4739,6 +4739,23 @@ button {
   -moz-transition: all .2s;
   transition: all .2s; }
 
+/* Colors */
+.button-red {
+  background: #EC87C0; }
+  .button-red:hover {
+    color: #EC87C0;
+    border-color: #EC87C0; }
+
+.btn-area {
+  position: relative; }
+
+.circle-button {
+  display: flex;
+  /* 2 */
+  justify-content: center;
+  /* 3 */
+  align-items: center; }
+
 .top-bar {
   position: relative;
   width: 100%;
@@ -5258,6 +5275,18 @@ button {
   right: 0;
   left: 0; }
 
+/* INDEX */
+.index_button_area {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 5;
+  width: 40vw;
+  height: 290px;
+  right: 0; }
+
 .key {
   background-color: #F8F9FA;
   cursor: pointer;
@@ -5378,3 +5407,6 @@ button {
   background: rgba(89, 89, 89, 0.08);
   border-left: solid 20px transparent;
   border-radius: 5px; }
+
+.division3 {
+  width: 33.33vh; }
