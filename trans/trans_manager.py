@@ -40,7 +40,7 @@ class SFCoinTransaction():
         else:
             from_obj = UserProfile.objects.get(user_name_identification=from_u)
             from_amount = from_obj.charged_amount
-            from_amount = int(amount) - int(amount)
+            from_amount = int(from_amount) - int(amount)
             UserProfile.objects.filter(user_name_identification=from_u).update(charged_amount=from_amount)
 
             to = UserProfile.objects.get(user_name_identification=to_u)
