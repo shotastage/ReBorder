@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Iceland|Share+Tech+Mono');
+
+
+.sc_card {
+  display: block;
+  //-webkit-transform: translateY(-50%); /* Safari用 */
+  //transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #F62459;
+  height: 290px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  transition: .3s;
+  font-family: Arial, Helvetica, sans-serif;
+
+  &:hover {
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+    //-webkit-transform: translateY(-50%); /* Safari用 */
+    //transform: translateY(-50%);
+    transform: scale(1.05,1.05);
+  }
+}
+
+
+.sc_title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.account_number_title {
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  font-size: 1rem;
+}
+
+.name_title {
+  position: absolute;
+  left: 40px;
+  bottom: 45px;
+  font-size: 1rem;
+}
+
+.sc_card_name {
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.sc_account_number {
+  position: absolute;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 3.5rem;
+  color: #fff;
+  letter-spacing: 6px;
+  text-shadow:
+    0.4px 0.4px #aaa,
+    0.8px 0.8px #999,
+    1.2px 1.2px #888;
+  left: 50px;
+  top: 160px;
+}
+
+.sc_name {
+  position: absolute;
+  font-family: 'Iceland', cursive;
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 6px;
+  bottom: 5px;
+  left: 50px;
+  text-shadow:
+    0.4px 0.4px #aaa,
+    0.8px 0.8px #999,
+    1.2px 1.2px #888;
+}
+
+
+.sc_remaining {
+  position: absolute;
+  font-size: 6rem;
+  color: #fff;
+  left: 40px;
+  top: 32px;
+}
+
+.sc_unit {
+  font-size: 2rem;
+}
+
+
+.sc_card_area {
+  height: 40vh;
+}
+
+.sc_card_area_light {
+  height: 90vh;
+}

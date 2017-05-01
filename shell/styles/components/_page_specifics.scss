@@ -31,6 +31,13 @@
     height: 180px;
     right: 0;
 }
+@media screen and (max-width: 600px) {
+    .index_button_area {
+        width: 20vw;
+        height: 180px;
+        right: 0;
+    }
+}
 
 
 /* Pairing */

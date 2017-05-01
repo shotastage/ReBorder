@@ -4552,7 +4552,7 @@ button.close {
 
 body {
   box-sizing: border-box;
-  background: #fff; }
+  background: #3ec7c2; }
 
 .visible {
   display: block; }
@@ -4751,9 +4751,7 @@ button {
 
 .circle-button {
   display: flex;
-  /* 2 */
   justify-content: center;
-  /* 3 */
   align-items: center; }
 
 .top-bar {
@@ -5287,6 +5285,12 @@ button {
   height: 180px;
   right: 0; }
 
+@media screen and (max-width: 600px) {
+  .index_button_area {
+    width: 20vw;
+    height: 180px;
+    right: 0; } }
+
 /* Pairing */
 .pairing_button_area {
   display: block;
@@ -5424,3 +5428,7 @@ button {
 
 .division3 {
   width: 33.33vh; }
+
+.page_heading1 {
+  font-size: 80px;
+  color: #fff; }
