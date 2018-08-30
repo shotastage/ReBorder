@@ -1,6 +1,10 @@
 # 💰  ReBorder (Test project)
 
 >> This project is a initial concept, not a production system.
+>> It does not contain the latest source code on important billing!
+
+>> このプロジェクトはコンセプト製品です。本番製品ではありません。
+>> 重要な課金に関する最新のソースコードを含んでいません！
 
 ReBorder is virtual payment system for SFC (Keio univ Shonan Fujisawa Campus).
 
